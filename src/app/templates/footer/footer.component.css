@@ -1,0 +1,9 @@
+footer {
+    position: fixed;
+    height: 50px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 0px; /* Ajusta el relleno según tus necesidades */
+    box-sizing: border-box; /* Incluye el relleno en el ancho total */
+}
