@@ -1,0 +1,27 @@
+<app-header></app-header>
+
+<div class="container">
+  <h1>Tipo de novedades</h1>
+  <button type="button" class="btn btn-success" (click)="newTipoNovedad()">Create new tipo de novedad</button> <br><br>
+  <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Tipo de novedad</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let tipoNovedad of tipoNovedades ">
+            <th scope="row">{{ tipoNovedad.idTipoNovedad }}</th>
+            <td>{{ tipoNovedad.tipoNovedad }}</td>
+            <td>
+              <button type="button" class="btn btn-info" (click)="editTipoNovedad(tipoNovedad.idTipoNovedad)">Edit</button> |
+              <button class="btn btn-danger" (click)="deleteTipoNovedad(tipoNovedad.idTipoNovedad)">Delete</button>
+            </td>
+          </tr>
+      </tbody>
+  </table><br>
+  <button type="button" class="btn btn-secondary" (click)="goBack()">Volver a la lista</button>
+</div>
+
+<app-footer></app-footer>

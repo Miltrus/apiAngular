@@ -1,0 +1,25 @@
+<app-header></app-header>
+
+<div class="container">
+    <form [formGroup]="editForm" (ngSubmit)="postForm(editForm.value)">
+        <div class="form-group">
+            <label for="exampleFormControlInput1">ID Tipo novedad</label>
+            <input type="text" class="form-control" formControlName="idTipoNovedad" readonly/>
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Tipo novedad</label>
+            <select class="form-control" formControlName="tipoNovedad">
+                <option value="retraso">Retraso</option>
+                <option value="devolucion">Devolución</option>
+                <option value="otro">Otro</option>
+            </select>
+        </div>
+        <br><br/> 
+        
+        <button type="button" class="btn btn-secondary" (click)="goBack()">Atras</button> |
+        <button type="submit" class="btn btn-success" >Editar</button>
+        
+    </form>
+</div>
+
+<app-footer></app-footer>

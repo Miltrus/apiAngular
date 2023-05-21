@@ -1,0 +1,25 @@
+<app-header></app-header>
+
+<div class="container">
+    <form [formGroup]="newForm" (ngSubmit)="postForm(newForm.value)">
+        <div class="form-group">
+            <label for="exampleFormControlInput1">ID Tipo de novedad</label>
+            <input type="text" class="form-control" formControlName="idTipoNovedad"/>
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Tipo de novedad</label>
+            <select class="form-control" formControlName="tipoNovedad">
+                <option value="retraso">Retraso</option>
+                <option value="devolucion">Devolucion</option>
+                <option value="otro">Otro</option>
+            </select>
+        </div>
+        <br><br/> 
+        
+        <button type="button" class="btn btn-secondary" (click)="goBack()">Atras</button> |
+        <button type="submit" class="btn btn-success" >Guardar</button>
+        
+    </form>
+</div>
+
+<app-footer></app-footer>
