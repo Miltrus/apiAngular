@@ -32,9 +32,14 @@ export class ApiService {
     return this.http.get<RolInterface>(address);
   }
 
-  putRol(form: RolInterface):Observable<RolInterface>{
+  postRol(form: RolInterface):Observable<ResponseInterface>{
+    let address = this.url + 'rol';
+    return this.http.post<ResponseInterface>(address, form);
+  }
+
+  putRol(form: RolInterface):Observable<ResponseInterface>{
     let address = this.url + 'rol/';
-    return this.http.put<RolInterface>(address, form);
+    return this.http.put<ResponseInterface>(address, form);
   }
 
   deleteRol(id: any):Observable<ResponseInterface>{

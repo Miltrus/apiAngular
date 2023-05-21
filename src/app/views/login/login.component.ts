@@ -23,14 +23,14 @@ export class LoginComponent implements OnInit{
   errorMsg: any = '';
 
   ngOnInit(): void {
-    this.checkLocalStorage();
+    /* this.checkLocalStorage(); */
   }
 
-  checkLocalStorage() {
+  /* checkLocalStorage() {
     if(localStorage.getItem('token')){
       this.router.navigate(['dashboard']);
     }
-  }
+  } */
 
   onLogin(form: LoginInterface) {
     this.api.LoginByEmail(form).subscribe(data => {
@@ -39,7 +39,6 @@ export class LoginComponent implements OnInit{
         localStorage.setItem("token", dataResponse.token);
         this.router.navigate(['dashboard']);
         console.log(dataResponse.token);
-        
       }
       else {
         this.errorStatus = true;
