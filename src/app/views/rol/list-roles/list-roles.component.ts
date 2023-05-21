@@ -7,11 +7,11 @@ import { RolInterface } from 'src/app/models/rol.interface';
 
 
 @Component({
-  selector: 'app-roles',
-  templateUrl: './roles.component.html',
-  styleUrls: ['./roles.component.css']
+  selector: 'app-list-roles',
+  templateUrl: './list-roles.component.html',
+  styleUrls: ['./list-roles.component.css']
 })
-export class RolesComponent implements OnInit{
+export class ListRolesComponent implements OnInit{
 
   constructor(private api:RolService, private router:Router, private alerts:AlertsService) {  }
 

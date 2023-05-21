@@ -31,7 +31,7 @@ export class NewRolComponent implements OnInit{
       let respuesta: ResponseInterface = data;
       if(respuesta.status == 'ok'){
         this.alerts.showSuccess('El rol ha sido creado exitosamente.', 'Rol Creado');
-        this.router.navigate(['roles']);
+        this.router.navigate(['list-roles']);
       }
       else{
         this.alerts.showError(respuesta.msj, 'Error al crear el rol');
@@ -40,6 +40,6 @@ export class NewRolComponent implements OnInit{
   }
 
   goBack(){
-    this.router.navigate(['roles']);
+    this.router.navigate(['list-roles']);
   }
 }

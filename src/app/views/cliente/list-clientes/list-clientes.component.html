@@ -1,0 +1,36 @@
+<app-header></app-header>
+
+<div class="container">
+  <h1>Clientes</h1>
+  <button type="button" class="btn btn-success" (click)="newCliente()">Create new cliente</button> <br><br>
+  <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Documento</th>
+          <th scope="col">Tipo documento</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Telefono</th>
+          <th scope="col">Correo</th>
+          <th scope="col">Direccion</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let cliente of clientes">
+            <th scope="row">{{ cliente.documentoCliente }}</th>
+            <td>{{ cliente.idTipoDocumento }} - {{ getTipoDocumento (cliente.idTipoDocumento) }}</td>
+            <td>{{ cliente.nombreCliente }}</td>
+            <td>{{ cliente.telefonoCliente }}</td>
+            <td>{{ cliente.correoCliente }}</td>
+            <td>{{ cliente.direccionCliente }}</td>
+            <td>
+              <button type="button" class="btn btn-info" (click)="editCliente(cliente.documentoCliente)">Edit</button> |
+              <button class="btn btn-danger" (click)="deleteCliente(cliente.documentoCliente)">Delete</button>
+            </td>
+          </tr>
+      </tbody>
+  </table><br>
+  <button type="button" class="btn btn-secondary" (click)="goBack()">Volver a la lista</button>
+</div>
+
+<app-footer></app-footer>

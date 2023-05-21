@@ -44,7 +44,7 @@ export class EditModuloComponent implements OnInit{
       let respuesta: ResponseInterface = data;
       if(respuesta.status == 'ok'){
         this.alerts.showSuccess('El modulo ha sido modificado exitosamente.', 'Modificación exitosa');
-        this.router.navigate(['modulos']);
+        this.router.navigate(['list-modulos']);
       }
       else{
         this.alerts.showError(respuesta.msj, "Error en la modificación");
@@ -53,6 +53,6 @@ export class EditModuloComponent implements OnInit{
   }
 
   goBack(){
-    this.router.navigate(['modulos']);
+    this.router.navigate(['list-modulos']);
   }
 }

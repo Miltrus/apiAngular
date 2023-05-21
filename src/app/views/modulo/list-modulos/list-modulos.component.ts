@@ -7,11 +7,11 @@ import { ModuloInterface } from 'src/app/models/modulo.interface';
 
 
 @Component({
-  selector: 'app-modulos',
-  templateUrl: './modulos.component.html',
-  styleUrls: ['./modulos.component.css']
+  selector: 'app-list-modulos',
+  templateUrl: './list-modulos.component.html',
+  styleUrls: ['./list-modulos.component.css']
 })
-export class ModulosComponent implements OnInit{
+export class ListModulosComponent implements OnInit{
 
   constructor(private api:ModuloService, private router:Router, private alerts:AlertsService) {  }
 
