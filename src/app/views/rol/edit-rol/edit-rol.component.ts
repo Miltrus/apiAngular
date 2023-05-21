@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-import { RolInterface } from '../../../models/rol/rol.interface';
-import { ApiService } from '../../../services/api/api.service';
+import { RolInterface } from '../../../models/rol.interface';
+import { RolService } from '../../../services/api/rol/rol.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { AlertsService } from '../../../services/alerts/alerts.service';
 import { ResponseInterface } from '../../../models/response.interface';
@@ -13,7 +13,7 @@ import { ResponseInterface } from '../../../models/response.interface';
 })
 export class EditRolComponent implements OnInit{
 
-  constructor(private router:Router, private activatedRouter:ActivatedRoute, private api:ApiService, private alerts:AlertsService) { }
+  constructor(private router:Router, private activatedRouter:ActivatedRoute, private api:RolService, private alerts:AlertsService) { }
 
   dataRol: RolInterface[] = [];
   editForm = new FormGroup({
@@ -41,8 +41,8 @@ export class EditRolComponent implements OnInit{
     return localStorage.getItem('token');
   }
 
-  postForm(form: RolInterface){
-    this.api.putRol(form).subscribe(data => {
+  postForm(id: any){
+    this.api.putRol(id).subscribe(data => {
       let respuesta: ResponseInterface = data;
       if(respuesta.status == 'ok'){
         this.alerts.showSuccess('El rol ha sido modificado exitosamente.', 'Modificación Exitosa');

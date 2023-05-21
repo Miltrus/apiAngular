@@ -3,8 +3,8 @@ import { OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
 import { AlertsService } from '../../../services/alerts/alerts.service';
-import { ApiService } from '../../../services/api/api.service';
-import { RolInterface } from '../../../models/rol/rol.interface';
+import { RolService } from '../../../services/api/rol/rol.service';
+import { RolInterface } from '../../../models/rol.interface';
 import { ResponseInterface } from '../../../models/response.interface';
 
 @Component({
@@ -14,7 +14,7 @@ import { ResponseInterface } from '../../../models/response.interface';
 })
 export class NewRolComponent implements OnInit{
 
-  constructor(private router:Router, private api:ApiService, private alerts:AlertsService) { }
+  constructor(private router:Router, private api:RolService, private alerts:AlertsService) { }
 
   newForm = new FormGroup({
     idRol: new FormControl(''),

@@ -4,18 +4,11 @@
     <form [formGroup]="editForm" (ngSubmit)="postForm(editForm.value)">
         <div class="form-group">
             <label for="exampleFormControlInput1">ID Rol</label>
-            <input type="text" class="form-control" formControlName="idRol" readonly/>
+            <input type="text" class="form-control" formControlName="idModulo" readonly/>
         </div>
         <div class="form-group">
             <label for="exampleFormControlInput1">Nombre Rol</label>
-            <select class="form-control" formControlName="nombreRol">
-                <option value="Administrador">Administrador</option>
-                <option value="Mensajero">Mensajero</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="exampleFormControlInput1">Descripcion Rol</label>
-            <input type="text" class="form-control" formControlName="descripcionRol"/>
+            <input type="text" class="form-control" formControlName="modulo"/>
         </div>
         <br><br/> 
         

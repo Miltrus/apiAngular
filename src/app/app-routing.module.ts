@@ -2,17 +2,27 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './views/login/login.component';
 import { DashboardComponent } from './views/dashboard/dashboard.component';
+
 import { RolesComponent } from './views/rol/roles/roles.component';
 import { NewRolComponent } from './views/rol/new-rol/new-rol.component';
 import { EditRolComponent } from './views/rol/edit-rol/edit-rol.component'
+
+import { ModulosComponent } from './views/modulo/modulos/modulos.component';
+import { NewModuloComponent } from './views/modulo/new-modulo/new-modulo.component';
+import { EditModuloComponent } from './views/modulo/edit-modulo/edit-modulo.component';
 
 const routes: Routes = [
   { path: '',  redirectTo: 'login', pathMatch: 'full'}, //ruta x defecto
   { path: 'login', component: LoginComponent },
   { path: 'dashboard', component: DashboardComponent },
+  
   { path: 'roles', component: RolesComponent },
   { path: 'new-rol', component: NewRolComponent },
-  { path: 'edit-rol/:id', component: EditRolComponent}
+  { path: 'edit-rol/:id', component: EditRolComponent},
+
+  { path: 'modulos', component: ModulosComponent },
+  { path: 'new-modulo', component: NewModuloComponent },
+  { path: 'edit-modulo/:id', component: EditModuloComponent}
 ];
 
 @NgModule({
@@ -24,7 +34,12 @@ export class AppRoutingModule { }
 export const routingComponents = [
   LoginComponent, 
   DashboardComponent, 
+
   RolesComponent, 
   NewRolComponent, 
-  EditRolComponent
+  EditRolComponent,
+  
+  ModulosComponent,
+  NewModuloComponent,
+  EditModuloComponent
 ]

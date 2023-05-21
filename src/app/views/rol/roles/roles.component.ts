@@ -1,9 +1,9 @@
 import { Component, OnInit} from '@angular/core';
-import { ApiService } from '../../../services/api/api.service';
+import { RolService } from '../../../services/api/rol/rol.service';
 import { Router } from '@angular/router';
-import { ListRolesInterface } from '../../../models/rol/list-roles.interface';
 import { AlertsService } from '../../../services/alerts/alerts.service';
 import { ResponseInterface } from 'src/app/models/response.interface';
+import { RolInterface } from 'src/app/models/rol.interface';
 
 
 @Component({
@@ -13,9 +13,9 @@ import { ResponseInterface } from 'src/app/models/response.interface';
 })
 export class RolesComponent implements OnInit{
 
-  constructor(private api:ApiService, private router:Router, private alerts:AlertsService) {  }
+  constructor(private api:RolService, private router:Router, private alerts:AlertsService) {  }
 
-  roles: ListRolesInterface[] = [];
+  roles: RolInterface[] = [];
 
   ngOnInit(): void {
     this.api.getAllRoles().subscribe(data => {

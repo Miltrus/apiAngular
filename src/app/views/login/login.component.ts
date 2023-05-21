@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { ApiService } from '../../services/api/api.service';
+import { LoginService } from '../../services/api/login/login.service';
 import { LoginInterface } from '../../models/login.interface';
 import { ResolveData, Router } from '@angular/router';
 import { ResponseInterface } from '../../models/response.interface';
@@ -17,7 +17,7 @@ export class LoginComponent implements OnInit{
     contrasenaUsuario: new FormControl('', Validators.required)
   })
 
-  constructor(private api:ApiService, private router:Router) { }
+  constructor(private api:LoginService, private router:Router) { }
 
   errorStatus: boolean = false;
   errorMsg: any = '';
@@ -33,7 +33,7 @@ export class LoginComponent implements OnInit{
   } */
 
   onLogin(form: LoginInterface) {
-    this.api.LoginByEmail(form).subscribe(data => {
+    this.api.onLogin(form).subscribe(data => {
       let dataResponse: ResponseInterface = data;
       if (dataResponse.status == 'ok') {
         localStorage.setItem("token", dataResponse.token);
