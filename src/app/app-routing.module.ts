@@ -11,6 +11,10 @@ import { ModulosComponent } from './views/modulo/modulos/modulos.component';
 import { NewModuloComponent } from './views/modulo/new-modulo/new-modulo.component';
 import { EditModuloComponent } from './views/modulo/edit-modulo/edit-modulo.component';
 
+import { TipoNovedadesComponent } from './views/tipoNovedad/tipo-novedades/tipo-novedades.component';
+import { NewTipoNovedadComponent } from './views/tipoNovedad/new-tipo-novedad/new-tipo-novedad.component';
+import { EditTipoNovedadComponent } from './views/tipoNovedad/edit-tipo-novedad/edit-tipo-novedad.component';
+
 const routes: Routes = [
   { path: '',  redirectTo: 'login', pathMatch: 'full'}, //ruta x defecto
   { path: 'login', component: LoginComponent },
@@ -22,7 +26,11 @@ const routes: Routes = [
 
   { path: 'modulos', component: ModulosComponent },
   { path: 'new-modulo', component: NewModuloComponent },
-  { path: 'edit-modulo/:id', component: EditModuloComponent}
+  { path: 'edit-modulo/:id', component: EditModuloComponent},
+
+  { path: 'tipoNovedades', component: TipoNovedadesComponent },
+  { path: 'new-tipo-novedad', component: NewTipoNovedadComponent },
+  { path: 'edit-tipo-novedad/:id', component: EditTipoNovedadComponent},
 ];
 
 @NgModule({
@@ -41,5 +49,9 @@ export const routingComponents = [
   
   ModulosComponent,
   NewModuloComponent,
-  EditModuloComponent
+  EditModuloComponent,
+
+  TipoNovedadesComponent,
+  NewTipoNovedadComponent,
+  EditTipoNovedadComponent,
 ]

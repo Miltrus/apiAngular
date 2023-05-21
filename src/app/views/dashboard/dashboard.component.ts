@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class DashboardComponent {
   modules = [
     { name: 'Roles', route: '/roles'},
-    { name: 'Modulos', route: '/modulos'}
+    { name: 'Modulos', route: '/modulos'},
+    { name: 'TipoNovedades', route: '/tipoNovedades'}
   ]
 }
