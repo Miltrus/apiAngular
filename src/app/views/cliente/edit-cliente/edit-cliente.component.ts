@@ -10,7 +10,7 @@ import { AlertsService } from '../../../services/alerts/alerts.service';
 import { ResponseInterface } from '../../../models/response.interface';
 
 @Component({
-  selector: 'app-edit-rol',
+  selector: 'app-edit-cliente',
   templateUrl: './edit-cliente.component.html',
   styleUrls: ['./edit-cliente.component.css']
 })

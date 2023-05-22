@@ -11,5 +11,6 @@ export class DashboardComponent {
     { name: 'Modulos', route: '/list-modulos'},
     { name: 'Permisos', route: '/list-permisos'},
     { name: 'Clientes', route: '/list-clientes'},
+    { name: 'Usuarios', route: '/list-usuarios'},
   ]
 }

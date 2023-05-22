@@ -9,7 +9,7 @@ import { ResponseInterface } from '../../../models/response.interface';
 import { TipoDocumentoInterface } from 'src/app/models/tipo-documento.interface';
 
 @Component({
-  selector: 'app-new-rol',
+  selector: 'app-new-cliente',
   templateUrl: './new-cliente.component.html',
   styleUrls: ['./new-cliente.component.css']
 })

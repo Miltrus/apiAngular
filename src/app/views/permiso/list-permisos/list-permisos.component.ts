@@ -23,7 +23,6 @@ export class ListPermisosComponent implements OnInit{
   ngOnInit(): void {
     this.api.getAllPermisos().subscribe(data => {
       this.permisos = data;
-      console.log(this.permisos);
     })
     this.moduloService.getAllModulos().subscribe(data => {
       this.modulos = data;

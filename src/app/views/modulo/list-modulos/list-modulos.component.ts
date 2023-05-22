@@ -20,7 +20,6 @@ export class ListModulosComponent implements OnInit{
   ngOnInit(): void {
     this.api.getAllModulos().subscribe(data => {
       this.modulos = data;
-      console.log(this.modulos);
     })
   }
 

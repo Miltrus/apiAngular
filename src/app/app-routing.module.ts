@@ -19,6 +19,10 @@ import { ListClientesComponent } from './views/cliente/list-clientes/list-client
 import { NewClienteComponent } from './views/cliente/new-cliente/new-cliente.component';
 import { EditClienteComponent } from './views/cliente/edit-cliente/edit-cliente.component';
 
+import { ListUsuariosComponent } from './views/usuario/list-usuarios/list-usuarios.component';
+import { NewUsuarioComponent } from './views/usuario/new-usuario/new-usuario.component';
+import { EditUsuarioComponent } from './views/usuario/edit-usuario/edit-usuario.component';
+
 const routes: Routes = [
   { path: '',  redirectTo: 'login', pathMatch: 'full'}, //ruta x defecto
   { path: 'login', component: LoginComponent },
@@ -39,6 +43,10 @@ const routes: Routes = [
   { path: 'list-clientes', component: ListClientesComponent },
   { path: 'new-cliente', component: NewClienteComponent },
   { path: 'edit-cliente/:id', component: EditClienteComponent},
+
+  { path: 'list-usuarios', component: ListUsuariosComponent },
+  { path: 'new-usuario', component: NewUsuarioComponent },
+  { path: 'edit-usuario/:id', component: EditUsuarioComponent},
 ];
 
 @NgModule({
@@ -66,4 +74,8 @@ export const routingComponents = [
   ListClientesComponent,
   NewClienteComponent,
   EditClienteComponent,
+
+  ListUsuariosComponent,
+  NewUsuarioComponent,
+  EditUsuarioComponent,
 ]

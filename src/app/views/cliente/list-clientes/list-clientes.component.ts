@@ -22,11 +22,9 @@ export class ListClientesComponent implements OnInit{
   ngOnInit(): void {
     this.api.getAllClientes().subscribe(data => {
       this.clientes = data;
-      console.log(this.clientes);
     })
     this.api.getTipoDocumento().subscribe(data => {
       this.tiposDocumento = data;
-      console.log(this.tiposDocumento);
     });
   }
 

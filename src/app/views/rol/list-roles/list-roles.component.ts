@@ -20,7 +20,6 @@ export class ListRolesComponent implements OnInit{
   ngOnInit(): void {
     this.api.getAllRoles().subscribe(data => {
       this.roles = data;
-      console.log(this.roles);
     })
   }
 
