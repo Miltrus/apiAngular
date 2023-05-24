@@ -22,10 +22,17 @@ export class ListClientesComponent implements OnInit{
   ngOnInit(): void {
     this.api.getAllClientes().subscribe(data => {
       this.clientes = data;
-    })
+    });
     this.api.getTipoDocumento().subscribe(data => {
       this.tiposDocumento = data;
     });
+    this.checkLocalStorage();
+  }
+
+  checkLocalStorage() {
+    if(!localStorage.getItem('token')){
+      this.router.navigate(['login']);
+    }
   }
 
   editCliente(id:any){

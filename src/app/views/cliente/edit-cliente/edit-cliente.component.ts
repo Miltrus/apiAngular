@@ -32,7 +32,6 @@ export class EditClienteComponent implements OnInit{
 
   ngOnInit(): void {
     let documentoCliente = this.activatedRouter.snapshot.paramMap.get('id');
-    let token = this.getToken();
     this.api.getOneCliente(documentoCliente).subscribe(data => {
       this.dataCliente = data ? [data] : []; //si data encontró algun valor, lo asignamos a dataRol envuelto en un arreglo, si data es null asignamos un arreglo vacio, si no se hace esto da error
       this.editForm.setValue({
@@ -45,10 +44,13 @@ export class EditClienteComponent implements OnInit{
       });
     })
     this.getTiposDocumento();
+    this.checkLocalStorage();
   }
 
-  getToken(){
-    return localStorage.getItem('token');
+  checkLocalStorage() {
+    if(!localStorage.getItem('token')){
+      this.router.navigate(['login']);
+    }
   }
 
   postForm(id: any){

@@ -13,5 +13,6 @@ export class HeaderComponent {
 
   goBack(){
     this.router.navigate(['login']);
+    localStorage.removeItem('token');
   }
 }

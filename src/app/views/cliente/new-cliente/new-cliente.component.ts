@@ -30,6 +30,13 @@ export class NewClienteComponent implements OnInit{
 
   ngOnInit(): void {
     this.getTiposDocumento();
+    this.checkLocalStorage();
+  }
+
+  checkLocalStorage() {
+    if(!localStorage.getItem('token')){
+      this.router.navigate(['login']);
+    }
   }
 
   postForm(form: ClienteInterface){
