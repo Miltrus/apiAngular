@@ -53,7 +53,7 @@ export class ListClientesComponent implements OnInit{
         this.alerts.showSuccess('El cliente ha sido eliminado exitosamente.', 'Eliminación Exitosa');
         window.location.reload();
       }else{
-        this.alerts.showError('No se pudo eliminar el cliente.', 'Error en la Eliminación');
+        this.alerts.showError(respuesta.msj, 'Error en la Eliminación');
       }
       });
     }
