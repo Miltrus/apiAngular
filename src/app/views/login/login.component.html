@@ -9,9 +9,25 @@
 
     <!-- Login Form -->
     <form [formGroup]="loginForm" (ngSubmit)="onLogin(loginForm.value)"> <!--enviamos el valor del form a la funcion onLogin-->
-      <input type="text" id="login" class="fadeIn second" formControlName="correoUsuario" placeholder="Email">
-      <input type="password" id="password" class="fadeIn third" formControlName="contrasenaUsuario" placeholder="Contraseña">
-      <input type="submit" class="fadeIn fourth" value="Log In">
+      <p>
+        <mat-form-field appearance="outline">
+          <mat-label>Correo electronico</mat-label>
+          <input id="login" class="fadeIn second" formControlName="correoUsuario" matInput placeholder="Correo">
+          <mat-icon matSuffix color="primary">person</mat-icon>
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field appearance="outline">
+          <mat-label>Contraseña</mat-label>
+          <input id="password" class="fadeIn third" formControlName="contrasenaUsuario" matInput placeholder="Contraseña" [type]="hide ? 'password' : 'text'">
+          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+            <mat-icon color="primary">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+        </mat-form-field>
+      </p>
+      <!-- <input type="text" id="login" class="fadeIn second" formControlName="correoUsuario" placeholder="Email">
+      <input type="password" id="password" class="fadeIn third" formControlName="contrasenaUsuario" placeholder="Contraseña"> -->
+      <input type="submit" class="fadeIn fourth" value="Iniciar sesión">
     </form>
 
     <!-- Remind Passowrd -->

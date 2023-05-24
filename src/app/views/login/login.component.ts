@@ -21,6 +21,7 @@ export class LoginComponent implements OnInit{
 
   errorStatus: boolean = false;
   errorMsg: any = '';
+  hide = true;
 
   ngOnInit(): void {
     /* this.checkLocalStorage(); */
