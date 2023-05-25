@@ -25,6 +25,10 @@ import { ListUsuariosComponent } from './views/usuario/list-usuarios/list-usuari
 import { NewUsuarioComponent } from './views/usuario/new-usuario/new-usuario.component';
 import { EditUsuarioComponent } from './views/usuario/edit-usuario/edit-usuario.component';
 
+import { ListPaquetesComponent } from './views/paquete/list-paquetes/list-paquetes.component';
+import { NewPaqueteComponent } from './views/paquete/new-paquete/new-paquete.component';
+import { EditPaqueteComponent } from './views/paquete/edit-paquete/edit-paquete.component';
+
 const routes: Routes = [
   { path: '', redirectTo: 'landing-page', pathMatch: 'full' }, //ruta x defecto
   { path: 'login', component: LoginComponent },
@@ -50,6 +54,10 @@ const routes: Routes = [
   { path: 'list-usuarios', component: ListUsuariosComponent },
   { path: 'new-usuario', component: NewUsuarioComponent },
   { path: 'edit-usuario/:id', component: EditUsuarioComponent },
+
+  { path: 'list-paquetes', component: ListPaquetesComponent },
+  { path: 'new-paquete', component: NewPaqueteComponent },
+  { path: 'edit-paquete/:id', component: EditPaqueteComponent },
 ];
 
 @NgModule({
@@ -82,4 +90,8 @@ export const routingComponents = [
   ListUsuariosComponent,
   NewUsuarioComponent,
   EditUsuarioComponent,
+
+  ListPaquetesComponent,
+  NewPaqueteComponent,
+  EditPaqueteComponent,
 ]
